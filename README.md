@@ -40,7 +40,7 @@ During exploration, it became evident that the dataset exhibited unusual behavio
 
 - Minimal customer churn behavior
 
-These properties shaped the direction of the business analysis and modeling strategy.
+These properties shaped the direction of the business analysis and modeling strategy. The dataset can be accessed : https://www.kaggle.com/datasets/smayanj/e-commerce-transactions-dataset
 
 
 
