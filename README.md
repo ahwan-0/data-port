@@ -70,119 +70,113 @@ A staging model was created to standardize and prepare raw transaction data. Fro
 
 After establishing the star schema, a comprehensive metrics layer was engineered to support business decision-making.
 
-Executive KPIs
+### Executive KPIs (Key Performance Indicators) An aggregated KPI overview was developed including :
 
-An aggregated KPI overview was developed including:
+- Total Orders
 
-Total Orders
+- Total Customers
 
-Total Customers
+- Total Revenue
 
-Total Revenue
-
-Average Order Value
+- Average Order Value
 
 These served as the foundation for executive reporting.
 
----
 
-Revenue Trend & Growth Analysis
+
+## Revenue Trend & Growth Analysis
 
 Monthly revenue aggregation revealed structured growth cycles with noticeable expansion and contraction periods. Monthly growth rates showed volatility ranging from significant positive spikes to sharp declines, indicating strong seasonal behavior.
 
 Revenue volatility was measured using standard deviation and coefficient of variation, which showed moderate variability (~16%). This suggests revenue stability despite growth fluctuations.
 
----
 
-Customer Behavior & Retention
+
+## Customer Behavior & Retention
 
 Repeat purchase rate analysis revealed an unusually high behavioral consistency — 100% of customers were repeat purchasers. Cohort analysis confirmed near-perfect retention across observed periods.
 
 This suggests the dataset resembles a B2B or subscription-style purchasing model rather than typical consumer ecommerce behavior.
 
-Customer Lifetime Value (CLV)
+Customer Lifetime Value (CLV) Customer lifetime value analysis showed balanced revenue contribution across the customer base, with moderate concentration among top spenders.
 
-Customer lifetime value analysis showed balanced revenue contribution across the customer base, with moderate concentration among top spenders.
 
----
-
-RFM Segmentation
+## RFM Segmentation
 
 An RFM (Recency, Frequency, Monetary) model was implemented to classify customers into value tiers. Due to PostgreSQL percentile limitations, NTILE-based segmentation was implemented for robust production compatibility.
 
 This allowed classification into:
 
-VIP customers
+- VIP customers
 
-High-value customers
+- High-value customers
 
-Standard customers
+- Standard customers
 
 The analysis confirmed revenue distribution was not highly concentrated, indicating relatively uniform purchasing behavior.
 
----
 
-Presentation Layer & BI Integration
+
+## Presentation Layer & BI Integration
 
 To support dashboard consumption, a presentation layer was created in dbt. This layer provided BI-ready views including:
 
-Executive dashboard summary
+- Executive dashboard summary
 
-Revenue trend view
+- Revenue trend view
 
-Customer segmentation view
+- Customer segmentation view
 
-Growth and volatility metrics
+- Growth and volatility metrics
 
-The system was then connected directly to Power BI via PostgreSQL, where a structured executive dashboard was developed featuring:
+The system was then connected directly to Power BI via PostgreSQL, where a structured executive dashboard was developed featuring :
 
-KPI cards
+- KPI cards
 
-Revenue trend line charts
+- Revenue trend line charts
 
-Growth rate analysis
+- Growth rate analysis
 
-Revenue by country
+- Revenue by country
 
-Customer segment distribution
+- Customer segment distribution
 
 This completed the full transformation from raw data to business insight visualization.
 
----
 
-Key Findings
 
-The analysis revealed several important insights about the dataset:
+## Key Findings
 
-Extremely high customer retention
+The analysis revealed several important insights about the dataset :
 
-Consistent high order frequency
+- Extremely high customer retention
 
-Moderate but controlled revenue volatility
+- Consistent high order frequency
 
-Stable geographic distribution
+- Moderate but controlled revenue volatility
 
-Balanced revenue concentration
+- Stable geographic distribution
 
-While the dataset did not reflect traditional ecommerce churn dynamics, it provided strong modeling practice for star schema design, behavioral analytics, and metric engineering.
+- Balanced revenue concentration
 
----
+- While the dataset did not reflect traditional ecommerce churn dynamics, it provided strong modeling practice for star schema design, behavioral analytics, and metric engineering.
 
-Technologies Used
 
-PostgreSQL
+## Technologies Used
 
-dbt Core (v1.11)
+- PostgreSQL
 
-SQL
+- dbt Core (v1.11)
 
-Power BI
+- SQL
 
-Python (environment setup)
+- Power BI
 
----
+- Python (environment setup)
 
-Conclusion
+
+
+## Conclusion
 
 This project successfully delivered a full-stack BI analytics system using modern data tooling. From warehouse modeling to executive dashboard delivery, the workflow followed industry best practices in analytics engineering.
 
